@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="java.js" defer></script>
+    <title>Document</title>
+    
+</head>
+<body>
+<header>
+    <a href="" class="btnVerde">botão</a>
+    <a href="" class="btnVerde">botão</a>
+    <a href="" class="btnVerde">botão</a>
+    <a href="" class="btnVerde">botão</a>
+    <a href="" class="btnVerde">botão</a>
+    <div id="switch">
+        <div id="btnBranco">
+            <input type="checkbox" id="checkBranco">
+        </div>
+    </div>
+</header>
+
+<main>
+    <dialog id="modal">
+        <div class="conteudoModal">
+          
+           <div class="dados">
+            <p>NOME:</p> 
+            <input type="text" id="nome"  placeholder="Digite seu nome" oninput="pegarNome()">            
+           </div>
+           <div class="dados">
+            <p>ENDEREÇO:</p> 
+            <input type="text" id="endereco"  placeholder="Digite seu endereço">  
+           </div>
+           <div class="dados">
+            <p>TELEFONE:</p> 
+            <input type="text" id="telefone"  placeholder="Digite seu telefone" oninput=mascara_telefone() maxlength="14">  
+           </div>
+           <div class="dados">
+            <p>CPF:</p> 
+            <input type="text" id="cpf"  placeholder="Digite seu cpf" oninput=mascara_cpf() maxlength="14">  
+           </div>
+           <div class="dados">
+            <p>IDADE:</p> 
+            <input type="text" id="idade"  placeholder="Digite seu idade">  
+           </div>
+           <div class="dados">
+            <p>RG:</p> 
+            <input type="text" id="rg"  placeholder="Digite seu RG" oninput=mascara_rg() maxlength="14">  
+           </div>
+            <button class="btnMODAL" onclick="fechar()">close</button>
+            <button class="btnMODAL" onclick="window.location.href='pag2.html'">enviar</button>
+        </div>
+    </dialog>
+
+    <div id="cardsGrid">
+
+ <div class="cards" onclick="abrir()">
+  <button id="btnModal">OPEN</button>
+ </div>
+
+ <div class="cards" onclick="abrir()">
+    <button id="btnModal">OPEN</button>
+   </div>
+
+   <div class="cards" onclick="abrir()">
+    <button id="btnModal">OPEN</button>
+   </div>
+
+   <div class="cards" onclick="abrir()">
+    <button id="btnModal">OPEN</button>
+   </div>
+
+   <div class="cards" onclick="abrir()">
+    <button id="btnModal">OPEN</button>
+   </div>
+
+   <div class="cards" onclick="abrir()">
+    <button id="btnModal">OPEN</button>
+   </div>
+
+   <div class="cards" onclick="abrir()">
+    <button id="btnModal">OPEN</button>
+   </div>
+
+   <div class="cards" onclick="abrir()">
+    <button id="btnModal">OPEN</button>
+   </div>
+
+ 
+    </div>
+</main>
+
+
+
+</body>
+</html>
