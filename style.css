@@ -2,16 +2,21 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    background-color: var(--cor-fundo);
+   
 }
 
 header>a{
 width: 15%;
 height: 6vh;
-background-color: rgb(78, 219, 142);
+background-color: var(--cor-card);
 border-radius: 40px;
 margin-top: 1%;
 }
-
+main{
+    z-index: 7;
+    height: 90vh;
+}
 
 header{
     display: flex;
@@ -24,13 +29,13 @@ header{
    justify-content: center;
    align-items: center;
     display: flex;
-    color: #000;
+    color: var(--cor-texto);
 }
 
 #switch{
     width:3%;
     height: 3vh;
-    background-color: #ee3ed6;
+    background-color: var(--cor-botao-mode);
     border: solid 2px rgb(195, 255, 222);
     border-radius: 50px;
     align-items: center;
@@ -41,7 +46,7 @@ header{
 #btnBranco{
     width: 45%;
     height: 2.3vh;
-    background-color: white;
+   background-color: var(--cor-botao);
     border-radius: 360px;
     margin-left: 3%;
     display: flex;
@@ -50,13 +55,14 @@ header{
 }
 
 #checkBranco{
-    opacity: 1;
+    opacity: 0;
+    transition: left 0.4s, background-color 0.4s;
 }
 
 .cards{
     width: 100%;
     height: 40vh;
-   background-color:  rgb(75, 201, 131);
+   background-color: var(--cor-card);
     border-radius: 30px;
     display: flex;
     justify-content: center;
@@ -68,7 +74,7 @@ display: grid;
 grid-template-columns: 10fr 10fr 10fr 10fr;
 grid-template-rows: 10fr 10fr;
 gap: 5%;
-margin-top: 4%;
+margin-top: 3%;
 }
 
 
@@ -78,6 +84,7 @@ margin-top: 4%;
     z-index: 1;
  border-radius: 30px;
  background-color: rgba(0,0,0,0);
+ color: var(--cor-texto);
  border: 0;
 }
 
@@ -123,7 +130,7 @@ margin-top: 4%;
    width: 20%;
    height: 7vh;
    border-radius: 50px;
-   background-color: rgb(126, 248, 173);
+   background-color: var(--cor-dados);
 margin-bottom: 1%;
 display: flex;
 align-items: center;
@@ -131,6 +138,12 @@ justify-content: center;
 flex-direction: column;
 }
 
+.dados>input{
+    background-color:var(--cor-input) ;
+}
+.dados>p{
+    background-color:var(--cor-p) ;
+}
 
 input{
     width: 98%;
@@ -145,4 +158,31 @@ input{
     height: 4vh;
     border-radius: 30px;
     margin-bottom: 0.4%;
+}
+
+:root {
+  --cor-fundo: #ffffff;
+  --cor-card: rgb(126, 248, 173);
+  --cor-botao: rgb(126, 248, 173);
+  --cor-botao-mode:  #ee3ed6;
+   --cor-texto: #000000;
+    --cor-input: #ffffff;
+   --cor-p:rgba(255, 255, 255, 0);
+    --cor-dados:  rgb(126, 248, 173);
+}
+
+body.dark-mode{
+    --cor-fundo: #c4c24f;
+  --cor-card: rgb(48, 2, 100);
+  --cor-botao: rgb(181, 148, 219);
+  --cor-botao-mode:   rgb(48, 2, 100);
+   --cor-texto: #c4c24f;
+   --cor-input:rgb(48, 2, 100);
+   --cor-p:rgba(255, 255, 255, 0);
+   --cor-dados:#c4c24f;
+}
+
+.switch.btnBranco.ativo{
+    margin-left: 100%;
+    transition: left 0.4s, background-color 0.4s;
 }

@@ -1,6 +1,16 @@
+
+const botao = document.getElementById("checkBranco");
+const body = document.body;
+
+
+botao.addEventListener("click", () => {
+  body.classList.toggle("dark-mode");
+   botao.classList.toggle("ativo");
+});
+
+
+
 var modal = document.getElementById("modal");
-
-
 function abrir(){
     modal.showModal()
 }
